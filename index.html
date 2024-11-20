@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
     <title>YS-CRM</title>
+    <script src="./scripts/utils.js" defer></script>
+    <script src="./scripts/objects.js" defer></script>
+    <script src="./scripts/quiz.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -20,10 +24,11 @@
                     Процедура
                 </h1>
                 <div class="procedure__quiz">
-                    <select name="" id="">
-                        <option value="">Претензия</option>
-                        <option value="">Общая информация</option>
-                        <option value="">Платежи</option>
+                    <select class="procedure__select procedure__select_main" name="" id="">
+                        <option class="procedure__option procedure__option_main" value="complaint">Претензия</option>
+                        <option class="procedure__option procedure__option_main" value="documents">Документы</option>
+                        <option class="procedure__option procedure__option_main" value="incident">ЧП</option>
+                        <option class="procedure__option procedure__option_main" value="payments">Платежи</option>
                     </select>
                 </div>
             </div>
