@@ -1,3 +1,7 @@
+const pr = (data) => {
+    console.log(`INFO: Type(${typeof(data)}) | Data(${data})`)
+}
+
 async function request(path) {
     let response = await fetch(path).then( async res => {
         // if (!res.ok) {
@@ -86,13 +90,18 @@ function addElement(tag, classes, text='') {
     /**adds an element to the DOM, sets its 
      * classes and contents if necessary.
      * @param  {String} tag     HTML tag name
-     * @param  {String} classes List class html element
+     * @param  {Object} classes List class html element
      * @param  {String} text    innerHTML element. Default empty
-     * @return {String}         undefined
+     * @return {undefined}      undefined
      */
+    pr(classes)
     let elem = document.createElement(tag)
-    for (let cls of classes) {
-        elem.classList.add(cls)
+    try{
+        for (let cls of classes) {
+            elem.classList.add(cls)
+        }
+    } catch (ex) {
+        console.log(`Error message: ${ex.message}\nStack:\n${ex.stack}`)
     }
 
     elem.innerHTML = text

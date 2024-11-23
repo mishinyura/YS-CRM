@@ -6,21 +6,25 @@ class Quiz {
         this.subSelect;
         this.subOptions = [];
         this.questionnaire;
-        this.classesSubSelect = ['procedure__select', 'procedure__select_sub']
-        this.classesSubOptions = ['procedure__option', 'procedure__option_sub']
-        this.classesQuestionnaire = ['procedure__widget', 'questionnaire']
-        this.data = tempRequestJson()
-        this.main(this)
+        this.classesSubSelect = ['procedure__select', 'procedure__select_sub'];
+        this.classesSubOptions = ['procedure__option', 'procedure__option_sub'];
+        this.classesQuestionnaire = ['procedure__widget', 'questionnaire'];
+        this.data = tempRequestJson();
     }
 
-    
+    createQuiz(value) {
+        // let quest = new Question(tempRequestData('complaint'))
+        console.log(this.classesQuestionnaire)
+        let container = addElement('div', this.classesQuestionnaire)
+        this.quiz.append(container)
+    }
 
     createSubcat = (cat) => {
         if (this.subSelect) {
             this.subSelect.remove()
         }
         let option;
-        this.subSelect = addElement('select', this.classesSubSelect)
+        window.subSelect = addElement('select', this.classesSubSelect)
         
         for (let opt of this.data[cat.target.value].subcat) {
             option = addElement('option', this.classesSubOptions, opt.rebose_name)
@@ -28,26 +32,15 @@ class Quiz {
             this.subSelect.append(option)
         }
         this.quiz.append(this.subSelect)
+        this.eventInit()
+        // for (let opt of this.subOptions) {
+        //     opt.addEventListener('click', this.createQuiz)
+        // }
+        return this.subSelect
     }
-
-    createQuiz() {
-        let quest = new Question(tempRequestData())
-        let container = addElement('div', this.classesQuestionnaire)
-        
-    }
-
-    main(obj) {
-        let title = document.querySelector('.procedure__title');
-        for (let option of this.mainOptions) {
-            option.addEventListener('click', this.createSubcat)
-        }
-        if (this.subSelect) {
-            for (let option of this.subOptions) {
-                option.addEventListener('click', this.createSubcat)
-            }
-        }
-        // title.addEventListener('click', obj.create_subcat)
-    }
-
 
 }
+
+/**
+ * База должна вернуть дерево состоящее из id и типа вопроса
+ */
