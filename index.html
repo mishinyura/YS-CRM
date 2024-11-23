@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>YS-CRM</title>
+    <script src="./scripts/utils.js" defer></script>
+    <script src="./scripts/objects.js" defer></script>
+    <script src="./scripts/quiz.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <input class="header__input" type="search" placeholder="Search">
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__section procedure">
+            <div class="procedure__container">
+                <h1 class="procedure__title">
+                    Процедура
+                </h1>
+                <div class="procedure__quiz">
+                    <select class="procedure__select procedure__select_main" name="" id="">
+                        <option class="procedure__option procedure__option_main" selected="true" value="">Категория</option>
+                        <option class="procedure__option procedure__option_main" value="complaint">Претензия</option>
+                        <option class="procedure__option procedure__option_main" value="documents">Документы</option>
+                        <option class="procedure__option procedure__option_main" value="incident">ЧП</option>
+                        <option class="procedure__option procedure__option_main" value="payments">Платежи</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

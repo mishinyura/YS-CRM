@@ -1,0 +1,44 @@
+{
+    "complaint": {
+        "rebose_name": "Претензия",
+        "subcat": {
+            "task": {
+                "rebose_name": "Задание"
+            },
+            "app": {
+                "rebose_name": "Приложение"
+            },
+            "service": {
+                "rebose_name": "Сервис Яндекс Смены"
+            },
+            "employee": {
+                "rebose_name": "Сервис"
+            }
+        }
+    },
+    "documents": {
+        "rebose_name": "Документы",
+        "subcat": {
+            "photo_control": {
+                "rebose_name": "Фотоконтроль"
+            }
+        }
+
+    },
+    "payments": {
+        "rebose_name": "Платежи",
+        "subcat": {
+            "payment_task": {
+                "rebose_name": "Выплата за задание",
+            }
+        }
+    },
+    "incident": {
+        "rebose_name": "ЧП",
+        "subcat": {
+            "conflict_job": {
+                "rebose_name": "Конфликт на задании",
+            }
+        }
+    }
+}
